@@ -27,21 +27,32 @@ df = pd.read_csv('path_to_your_file.csv')
 Let's look at the first rows of the data and check the data types in each column:
 # View the first 5 rows
 ```
-df.head()
+df.head(5)
 ```
-
+# View the last 5 rows
+```
+df.tail(5)
+```
 # Check data types
 ```
 df.info()
 ```
-▍3. Data Statistics
+▍3. Data Statistics and Clear 
 
 Calculate the main statistical characteristics of numerical columns:
 # Basic statistics
 ```
 df.describe()
 ```
-
+Replaces all the missing values in the DataFrame df with 0,
+```
+df.fillna(0,inplace=True)
+```
+Snippet iterates through each column and prints the column's name along with the number of missing (null or NaN) values it contains.
+```
+for col in df:
+    print(col, df[col].isnull().sum())
+```
 ▍4. Visual Data Analysis
 
 Create graphs for numerical variables:
