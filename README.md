@@ -56,7 +56,7 @@ for col in df:
 ▍4. Visual Data Analysis
 
 Create graphs for numerical variables:
-# Histogram for likes_count
+# Histogram for Most Frequent Hashtags
 ```
 hashtags[:20].plot.barh(title='Top 20 Most Frequent Hashtags')
 plt.xlabel("Кількість згадувань")
