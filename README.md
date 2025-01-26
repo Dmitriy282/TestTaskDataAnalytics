@@ -65,3 +65,53 @@ hashtags_list = df['text_original'].apply(extract_hashtags).explode()
 
 hashtags_list = hashtags_list.dropna()
 ```
+▍6. Correlation Analysis
+
+Calculate the correlation matrix for numerical columns:
+```
+corr = df[['likes_count', 'shares_count', 'comments_count', 'views_count']].corr()
+```
+
+Display the correlation matrix:
+```
+sns.heatmap(corr, annot=True)
+plt.show()
+```
+
+▍7. Report Preparation
+
+Prepare a report that includes the following elements:
+
+•   Description of the EDA process.
+•   Key findings and conclusions.
+•   Graphs and tables illustrating the results.
+•   Code used for the analysis.
+
+Example Report Structure:
+
+Report
+
+Introduction
+
+•   Brief description of the analysis goal.
+•   Description of the initial data.
+
+EDA Process
+
+•   Descriptions of the steps taken to examine the data.
+•   Methods and tools used.
+
+Results
+
+•   Tables with statistical characteristics.
+•   Graphs showing the data distribution.
+•   Conclusions regarding correlations and trends.
+
+Conclusion
+
+•   Summary of the main results.
+•   Recommendations for further research.
+
+Appendices
+
+•   Code used for analysis.
