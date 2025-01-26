@@ -46,19 +46,22 @@ df.describe()
 
 Create graphs for numerical variables:
 # Histogram for likes_count
-plt.figure(figsize=(10, 6))
-plt.hist(df['likes_count'], bins=10)
-plt.xlabel('Likes Count')
-plt.ylabel('Frequency')
-plt.title('Distribution of Likes Count')
-plt.grid(True)
+```
+hashtags[:20].plot.barh(title='Top 20 Most Frequent Hashtags')
+plt.xlabel("Кількість згадувань")
+plt.ylabel("Хештег")
 plt.show()
-
+```
 # The same for other numerical columns
 
 
 ▍5. Textual Information Analysis
 
-Analyze text columns such as text_original and text_additional. Find the most frequent words and hashtags:
+Analyze text columns such as text_original. Find the most frequent words and hashtags:
+```
 def extract_hashtags(text):
-    return re.findall(r'#\w+', text)
+    return re.findall(r'#\w+', str(text)) # Convert to string to handle non-string data
+hashtags_list = df['text_original'].apply(extract_hashtags).explode()
+
+hashtags_list = hashtags_list.dropna()
+```
