@@ -29,6 +29,11 @@ Let's look at the first rows of the data and check the data types in each column
 ```
 df.head()
 ```
+
+# Check data types
+```
+df.info()
+```
 ▍3. Data Statistics
 
 Calculate the main statistical characteristics of numerical columns:
