@@ -28,7 +28,7 @@ Let's look at the first rows of the data and check the data types in each column
 # View the first 5 rows
 ```
 df.head()
-
+```
 ▍3. Data Statistics
 
 Calculate the main statistical characteristics of numerical columns:
